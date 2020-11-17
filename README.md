@@ -21,20 +21,36 @@ var pItems = new PrivateItems();
 
 //This returns a Variable, this contains information on the Field/Property\
 Variable vari = pItems.GetVariable("I");\
-\
+
 ### Getting A Value
 
 //Returns a T\
 vari.GetValue<T>();\
 \
 //Returns an Object\
-vari.GetValue();\
+vari.GetValue();
 
-### Settings A Value
+### Setting A Value
 //Takes A T to insure value\
 vari.SetValue<T>(T val)\
 \
 //Takes an object for value\
 vari.SetValue(object val);\
-\
+
 #### You can get other information about the Variable as well
+
+## Calling and Getting Methods
+To get a method you will have to do the same thing as above but with GetMethod(string name), let's see\
+
+public class PrivateItems\
+{\
+    private void CallMe()\
+    {\
+         Console.WriteLine("Called");\
+    }\
+    
+    private void CallMe(string write)\
+    {\
+         Console.WriteLine(write);\
+    }\
+}\
