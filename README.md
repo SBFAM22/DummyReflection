@@ -11,11 +11,11 @@ Let's start with something really simple, Fields/Properties will from here be re
 
 So now let's use this example here:
 
-public class PrivateItems
-{
-   private int I = 10;
-}
-
+public class PrivateItems\
+{\
+   private int I = 10;\
+}\
+\
 //Make a new instance of a class
 var pItems = new PrivateItems();
 
