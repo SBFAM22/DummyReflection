@@ -16,25 +16,25 @@ public class PrivateItems\
    private int I = 10;\
 }\
 \
-//Make a new instance of a class
+//Make a new instance of a class\
 var pItems = new PrivateItems();
 
-//This returns a Variable, this contains information on the Field/Property
-Variable vari = pItems.GetVariable("I");
-
+//This returns a Variable, this contains information on the Field/Property\
+Variable vari = pItems.GetVariable("I");\
+\
 ### Getting A Value
 
-//Returns a T
-vari.GetValue<T>();
-  
-//Returns an Object
-vari.GetValue();
+//Returns a T\
+vari.GetValue<T>();\
+\
+//Returns an Object\
+vari.GetValue();\
 
 ### Settings A Value
-//Takes A T to insure value
-vari.SetValue<T>(T val)
-
-//Takes an object for value
-vari.SetValue(object val);
-
+//Takes A T to insure value\
+vari.SetValue<T>(T val)\
+\
+//Takes an object for value\
+vari.SetValue(object val);\
+\
 #### You can get other information about the Variable as well
