@@ -112,7 +112,50 @@ To get a method you will have to do the same thing as above but with GetMethod(s
         //This will retreive the Attribute for the method with its actual value!
         string name = fa.GetValue<string>("Name");
         
-         
+        
+        
+##Getting A Privated/Internalized Constructor
+
+Note: .NET5 Version Will Returns Records and not Classes
+
+Use (2 Overloads):
+
+            //1. DummyReflect.FindConstructor<T>(params Type[] constructor) => FoundConstructor
+            //2. DummyReflect.FindConstrcutor(Type t, params Type[] constructor) => FoundConstructor
+            
+            //Simply place in the Types your Constructor takes, inside FindConstructor it contains an Invoke(params object[] args) ==> Object
+            
+            public class HiddenCTOR
+            {
+               //This CTOR takes another Parameter of string ID, this means that you do not have an ID and it needs to be verified
+               public HiddenCTOR(string name, int age, string ID)
+               {
+                   Console.WriteLine(name);
+                   Console.WriteLine(age);
+                   Console.WriteLine(ID);
+               }
+               
+               //This CTOR does not take and ID String, this means that your ID is verified
+               private /*or internal*/ HiddenCTOR(string name, int age)
+               {
+                   Console.WriteLine(name);
+                   Console.WriteLine(age);
+                   Console.WriteLine("ID Accepted");
+               }
+               
+            }
+            
+            public class Program
+            {
+               public static void Main(string[] args)
+               {
+                  //I dont want the Public CTOR but yet the private one hidden from me
+                  var fCtor = DummyReflect.FindConstructor<HiddenCTOR>(new Type[] { typeof(string), typeof(int) });
+                  
+                  //Invoke with an Object[], make sure that it matches the Types of the CTOR arguments!
+                  fCtor.Invoke(new object[] { "Shawn", 16 });
+               }
+            }
          
          
          
