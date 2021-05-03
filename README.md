@@ -11,6 +11,7 @@ Let's start with something really simple, Fields/Properties will from here be re
 
 So now let's use this example here:
 
+```csharp
       public class PrivateItems
       {
          private int I = 10;
@@ -21,27 +22,33 @@ So now let's use this example here:
 
       //This returns a Variable, this contains information on the Field/Property\
       Variable vari = pItems.GetVariable("I");\
+```
 
 ### Getting A Value
 
+```csharp
       //Returns a T
       vari.GetValue<T>();
 
       //Returns an Object
       vari.GetValue();
-
+```
 ### Setting A Value
+
+```csharp
       //Takes A T to insure value
       vari.SetValue<T>(T val)
 
       //Takes an object for value
       vari.SetValue(object val);
+```
 
 #### You can get other information about the Variable as well
 
 ## Calling and Getting Methods
 To get a method you will have to do the same thing as above but with GetMethod(string name), let's see\
 
+```csharp
       public class PrivateItems
       {
            private void CallMe()
@@ -74,11 +81,13 @@ To get a method you will have to do the same thing as above but with GetMethod(s
 
       var retMethod = pItems.GetMethod("GetHello").Call<string>();
       //Alternative: var retMethod = (string)pItems.GetMethod("GetHello").Call();
-     
+```
+
 ### You can again get more info off of the Method Class
 
 ##Getting Privated Types
 
+```csharp
          //Luckily I tried making getting privated types very easy!
          //There is three overloads to FindType so let's go over them all
          
@@ -91,9 +100,11 @@ To get a method you will have to do the same thing as above but with GetMethod(s
          
          3. DummyReflect.FindType(object instance, string typeName, Parameters parameters = null)
          //This works like Num:2 but uses an instances of a class instead
+```
 
 ## Getting an Attribute Method/Variable/Type
    
+```csharp  
         public class NameMethod : Attribute
         {
             public string Name { get; set; }
@@ -112,7 +123,7 @@ To get a method you will have to do the same thing as above but with GetMethod(s
         //This will retreive the Attribute for the method with its actual value!
         string name = fa.GetValue<string>("Name");
         
-        
+```        
         
 ##Getting A Privated/Internalized Constructor
 
@@ -120,6 +131,7 @@ Note: .NET5 Version Will Returns Records and not Classes
 
 Use (2 Overloads):
 
+```csharp
             //1. DummyReflect.FindConstructor<T>(params Type[] constructor) => FoundConstructor
             //2. DummyReflect.FindConstrcutor(Type t, params Type[] constructor) => FoundConstructor
             
@@ -157,7 +169,7 @@ Use (2 Overloads):
                }
             }
          
-         
+```         
          
          
          
