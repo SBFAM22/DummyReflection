@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DummyReflection-NET5/1.0.0.4": {
+        "runtime": {
+          "DummyReflection-NET5.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DummyReflection-NET5/1.0.0.4": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

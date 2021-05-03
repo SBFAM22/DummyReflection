@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <RootNamespace>DummyReflection</RootNamespace>
+    <Version>1.0.0.4</Version>
+    <PackageId>DummyReflection</PackageId>
+    <Authors>BIGDummyHead</Authors>
+    <Product>DummyReflection</Product>
+    <Description></Description>
+    <Copyright>© 2020 Shawn J Bohn JR All Rights Reserved</Copyright>
+    <PackageLicenseFile>mitLicense.txt</PackageLicenseFile>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/BIGDummyHead/DummyReflection</RepositoryUrl>
+    <PackageTags>Reflection</PackageTags>
+    <PackageReleaseNotes>.NET 5 Update</PackageReleaseNotes>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\mitLicense.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

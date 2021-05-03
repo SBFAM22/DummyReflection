@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DummyReflection-NET5</name>
+    </assembly>
+    <members>
+        <member name="P:DummyReflection.AssemblyClass.Dummy">
+            <summary>
+            Read DummyClass For More Info
+            </summary>
+        </member>
+        <member name="P:DummyReflection.AssemblyClass.ConstructorArgs">
+            <summary>
+            The Arguments Supplied For The CTOR Used 
+            </summary>
+        </member>
+        <member name="P:DummyReflection.AssemblyClass.ConstructorTypes">
+            <summary>
+            The Types Supplied For The CTOR Used
+            </summary>
+        </member>
+        <member name="P:DummyReflection.AssemblyClass.Instance">
+            <summary>
+            New Instance Of The Type
+            <br></br>
+            <br>Do Not Use For Attributes -- Use Dummy</br>
+            <br>Can Be Changed To Your Own Instance But Uses The Instance Made By Your CTOR</br>
+            <br>Note: Can Be Used For Static Methods/Variables In Types</br>
+            </summary>
+        </member>
+        <member name="M:DummyReflection.AssemblyClass.CreateInstance">
+            <summary>
+            Creates A New Instance Of The Type
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.AssemblyClass.GetAttribute(System.String,System.Boolean,System.Type[])">
+            <summary>
+            <paramref name="constructor"/> Is To Find Specific Constructors But Does Not Use Its Values
+            </summary>
+            <param name="attributeName"></param>
+            <param name="inherits"></param>
+            <param name="constructor"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DummyReflection.DummyClass.InUse">
+            <summary>
+            The Type In Use At The Time
+            </summary>
+        </member>
+        <member name="P:DummyReflection.DummyClass.Methods">
+            <summary>
+            Every Method Inside The Privated Class Under This Instance(Alphabetically Ordered)(Non-Special)
+            </summary>
+        </member>
+        <member name="P:DummyReflection.DummyClass.SpecialMethods">
+            <summary>
+            Every Special-Method Inside The Privated Class Under This Instance(Alphabetically Ordered)(Special)
+            </summary>
+        </member>
+        <member name="P:DummyReflection.DummyClass.Variables">
+            <summary>
+            Every Property and Field Inside The Type Under This Instance(Alphabetically Ordered)
+            </summary>
+        </member>
+        <member name="P:DummyReflection.DummyClass.Instance">
+            <summary>
+            Instance Of Type
+            </summary>
+        </member>
+        <member name="M:DummyReflection.DummyReflect.GetVariable(System.Object,System.String)">
+            <summary>
+            Get A Field/Property By Name From This Instance
+            </summary>
+            <param name="instance"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.DummyReflect.GetMethod(System.Object,System.String,System.Type[])">
+            <summary>
+            Get A Method From This Instance By <paramref name="name"/>, Specify The Method By <see cref="T:System.Type"/>[] <paramref name="parameters"/>
+            </summary>
+            <param name="instance"></param>
+            <param name="name"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.DummyReflect.FindType(System.Reflection.Assembly,System.String,DummyReflection.Parameters)">
+            <summary>
+            This FindType uses an Assembly and Makes It Easier To Get A Type
+            <br></br>
+            <br>Note: Does Not Include Current Instance</br>
+            </summary>
+            <param name="assem"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.DummyReflect.FindType``1(System.String,DummyReflection.Parameters)">
+            <summary>
+            This FindType Is Made For Finding a Type based of a T type and Name
+            <br> </br>
+            <br>The <typeparamref name="TypeFromAssem"/> Should Be Fed Your typeof(T) a Type Inside Of The Assembly You Want</br>
+            <br>Note: Does Not Include Current Instance</br>
+            </summary>
+            <typeparam name="TypeFromAssem"></typeparam>
+            <param name="type"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.DummyReflect.FindType(System.Object,System.String,DummyReflection.Parameters)">
+            <summary>
+            This FindType Is Made For Instances Specifically
+            <br></br>
+            <br>Note: Does Not Include Current Instance</br>
+            </summary>
+            <param name="instance"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.FoundAttribute.GetValue(System.String)">
+            <summary>
+            <paramref name="name"/> Should Be The Name Of The Field/Property That Is Assigned To The Value Inside Of The CTOR
+            <br>Returns Null If That Value Is Never Set</br>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.FoundAttribute.GetValue``1(System.String)">
+            <summary>
+            <paramref name="name"/> Should Be The Name Of The Field/Property That Is Assigned To The Value Inside Of The CTOR
+            <br>Returns Null If That Value Is Never Set</br>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DummyReflection.FoundConstructor.Params">
+            <summary>
+            Parameters On The CTOR
+            </summary>
+        </member>
+        <member name="P:DummyReflection.FoundConstructor.Info">
+            <summary>
+            Info on the CTOR
+            </summary>
+        </member>
+        <member name="M:DummyReflection.FoundConstructor.Invoke(System.Object[])">
+            <summary>
+            Invokes The CTOR
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.FoundConstructor.Invoke``1(System.Object[])">
+            <summary>
+            Invokes The CTOR
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DummyReflection.Method.ReturnType">
+            <summary>
+            Type the Method Returns After Invoked
+            </summary>
+        </member>
+        <member name="M:DummyReflection.Method.IsReturnType``1">
+            <summary>
+            Does The Method Return What You Want?
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.Method.Call(System.Object[])">
+            <summary>
+            Calls The Method | Optional <paramref name="parameters"/> | Returns Object
+            </summary>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.Method.Call``1(System.Object[])">
+            <summary>
+            Calls The Method | Optional <paramref name="parameters"/> | Returns <typeparamref name="T"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.Method.GetAttribute(System.String,System.Boolean,System.Type[])">
+            <summary>
+            <paramref name="constructor"/> Is To Find Specific Constructors But Does Not Use Its Values
+            </summary>
+            <param name="attributeName"></param>
+            <param name="inherits"></param>
+            <param name="constructor"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DummyReflection.Variable.ValueType">
+            <summary>
+            The Value That The Field/Property Returns When Getting The Value
+            </summary>
+        </member>
+        <member name="P:DummyReflection.Variable.Info">
+            <summary>
+            Info On The Member
+            </summary>
+        </member>
+        <member name="P:DummyReflection.Variable.Instance">
+            <summary>
+            Instance You Gave
+            </summary>
+        </member>
+        <member name="M:DummyReflection.Variable.SetValue``1(``0)">
+            <summary>
+            Sets The Value Of The Field/Property (<typeparamref name="T"/>)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="val"></param>
+        </member>
+        <member name="M:DummyReflection.Variable.SetValue(System.Object)">
+            <summary>
+            Sets The Value Of The Field/Property
+            </summary>
+            <param name="val"></param>
+        </member>
+        <member name="M:DummyReflection.Variable.GetValue``1">
+            <summary>
+            Returns The Value Of The Field/Property(<typeparamref name="T"/>)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.Variable.GetValue">
+            <summary>
+            Returns The Value Of The Field/Property(<see cref="T:System.Object"/>)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DummyReflection.Variable.GetAttribute(System.String,System.Boolean,System.Type[])">
+            <summary>
+            <paramref name="constructor"/> Finds The Specific Attribute CTOR
+            </summary>
+            <param name="attributeName"></param>
+            <param name="inherits"></param>
+            <param name="constructor"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
